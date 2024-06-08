@@ -1,2 +1,3 @@
-# seg3125-proj-1
-My implementation/solution of/to the first project of seg3125, summer 2024
+# SEG3125 - Project 1
+#### By: Jay Ghosh
+My implementation of the first project of SEG3125, summer 2024.
