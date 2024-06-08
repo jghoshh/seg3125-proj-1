@@ -33,7 +33,7 @@ const Header = () => {
               '&:hover': {
                 color: theme.palette.primary.main, 
               }
-            }} component={RouterLink} to="/services">
+            }} component={RouterLink} to="/team">
             <Typography variant="body2" sx={{fontSize: "1rem",  letterSpacing: "0.05rem"}}>MEET THE TEAM</Typography>
           </Link>
         </Box>
