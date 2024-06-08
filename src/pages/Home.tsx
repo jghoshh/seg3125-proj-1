@@ -1,10 +1,12 @@
 import { Container, Typography, Box, Button, Stack } from "@mui/material";
 
 const Home = () => {
+  const basePath = import.meta.env.BASE_URL;
+  
   return (
     <>
       <Box sx={{
-        backgroundImage: 'url(/images/one.jpg)',
+        backgroundImage: `url(${basePath}images/one.jpg)`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '20% 50%',
         backgroundSize: 'cover',
@@ -74,7 +76,7 @@ const Home = () => {
         </Stack>
       </Container>
       <Box sx={{
-        backgroundImage: 'url(/images/two.jpg)',
+        backgroundImage: `url(${basePath}images/two.jpg)`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '20% 80%',
         backgroundSize: '120%',
@@ -102,7 +104,7 @@ const Home = () => {
         </Box>
         </Container>
       </Box>
-      <Container sx={{
+      <Container id="contact" sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
