@@ -51,7 +51,7 @@ const ConfirmationFollowup = () => {
           Confirmation Number: <span style={{ fontWeight: '600' }}>ABC1234</span>
         </Typography>
         <Typography variant="body1" textAlign="center" sx={{marginTop: "30px", fontSize: "1.5rem"}}>
-          You're follow-ups are all booked. <br/>
+          Your follow-ups are all booked. <br/>
           You will receive an email confirmation shortly.
         </Typography>
         <Typography variant="body1" textAlign="center" sx={{marginTop: "30px", fontSize: "1.2rem"}}>
