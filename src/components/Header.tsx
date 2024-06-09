@@ -53,8 +53,17 @@ const Header = () => {
               '&:hover': {
                 color: theme.palette.primary.main, 
               }
+            }} component={RouterLink} to="/curr">
+            <Typography variant="body2" sx={{fontSize: "1rem",  marginRight: "30px", letterSpacing: "0.05rem"}}>CURRENT PATIENTS</Typography>
+          </Link>
+
+          <Link underline="none" sx={{
+              color: theme.palette.secondary.main,  
+              '&:hover': {
+                color: theme.palette.primary.main, 
+              }
             }} component={HashLink} to="/home#contact">
-            <Typography variant="body2" sx={{fontSize: "1rem",  letterSpacing: "0.05rem"}}>CONTACT US</Typography>
+            <Typography variant="body2" sx={{fontSize: "1rem", letterSpacing: "0.05rem"}}>CONTACT US</Typography>
           </Link>
         </Box>
       </Container>

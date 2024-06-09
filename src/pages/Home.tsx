@@ -1,6 +1,8 @@
 import { Container, Typography, Box, Button, Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const basePath = import.meta.env.BASE_URL;
   
   return (
@@ -30,7 +32,7 @@ const Home = () => {
             <Typography variant="body2" color="text.secondary" textAlign={"center"} width={"75%"} marginTop={"20px"}>
               Rehabilitate and recover faster with professional, evidence-based physiotherapy. <br />
               With over <span style={{ textDecoration: "underline" }}>100,000</span> patients treated, Ambrosia is your recovery partner.</Typography>
-            <Button variant="contained" sx={{ marginTop: "30px" }}>
+            <Button variant="contained" sx={{ marginTop: "30px" }} onClick={() => {navigate("/booking1")}}>
               Book your <span style={{ "marginLeft": 4, "marginRight": 4, fontWeight: 700, fontStyle: "italic" }}>free</span>consultation
             </Button>
           </Box>
@@ -58,7 +60,7 @@ const Home = () => {
             <Typography variant="body1" sx={{ fontSize: "1rem" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam nec  posuere metus, ac finibus massa. Nullam pharetra urna nec facilisis  iaculis. Sed sit amet tristique dui.
             </Typography>
-            <Button variant="contained" sx={{ marginTop: "20px" }}>
+            <Button variant="contained" sx={{ marginTop: "20px" }} onClick={() => {navigate("/services")}}>
               View Services & Rates
             </Button>
           </Box>
@@ -69,7 +71,7 @@ const Home = () => {
             <Typography variant="body1" sx={{ fontSize: "1rem" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam nec  posuere metus, ac finibus massa. Nullam pharetra urna nec facilisis  iaculis. Sed sit amet tristique dui.
             </Typography>
-            <Button variant="contained" sx={{ marginTop: "20px" }}>
+            <Button variant="contained" sx={{ marginTop: "20px" }} onClick={() => {navigate("/team")}}>
               Meet the team
             </Button>
           </Box>

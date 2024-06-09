@@ -1,18 +1,24 @@
 import { Box, Container, Typography, Button } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { timeFormatter, dateFormatter } from '../utils/Formatters';
+
+interface LocationState {
+  firstName: string;
+  lastName: string;
+  email: string;
+  locationValue: string;
+  serviceValue: string;
+  physioValue: string;
+  kinesioValue: string;
+  dateValue: Date;
+  timeValue: Date;
+}
 
 const Confirmation = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const queryParams = new URLSearchParams(location.search);
-
-  const service = queryParams.get('service');
-  const namePhy = queryParams.get('namePhy');
-  const nameKis = queryParams.get('nameKis');
-  const date = queryParams.get('date');
-  const time = queryParams.get('time');
-
-  const isValid = service && namePhy && nameKis && date && time;
+  const { firstName, lastName, email, locationValue, serviceValue, physioValue, kinesioValue, dateValue, timeValue } = (location.state as LocationState) || { firstName: '', lastName: '', email: '' };
+  const isValid =  firstName && lastName && email && locationValue && serviceValue && physioValue && kinesioValue && dateValue && timeValue;
 
   if (!isValid) {
     return (
@@ -36,12 +42,15 @@ const Confirmation = () => {
             onClick={() => navigate('/')}
             sx={{ mt: 2 }}
           >
-            Go Back
+            Go To Home
           </Button>
         </Box>
       </Container>
     );
   }
+
+  const formattedDate = dateFormatter.format(dateValue);
+  const formattedTime = timeFormatter.format(timeValue);
 
   return (
     <Container>
@@ -62,8 +71,12 @@ const Confirmation = () => {
         >
           Confirmation Number: <span style={{ fontWeight: '600' }}>ABC1234</span>
         </Typography>
-        <Typography variant="body1" sx={{marginTop: "30px", fontSize: "1.5rem"}}>
-          You booked a {service} with {namePhy} and {nameKis} for the {date} at {time}.
+        <Typography textAlign="center" variant="body1" sx={{marginTop: "30px", fontSize: "1.3rem"}}>
+          You booked a <span style={{fontWeight: "700"}}> {serviceValue} </span> with 
+          <span style={{fontWeight: "700"}}> {physioValue} </span> and <span style={{fontWeight: "700"}}> {kinesioValue} </span> 
+          at the <span style={{fontWeight: "700"}}> {locationValue} </span> location
+          for <span style={{fontWeight: "700"}}>{`${formattedDate}`}</span> at <span style={{fontWeight: "700"}}>{`${formattedTime}`}</span>.<br/>
+          You will receive an email confirmation shortly.
         </Typography>
       </Box>
     </Container>
