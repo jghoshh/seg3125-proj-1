@@ -1,8 +1,10 @@
 import { Container, Box, Typography, Button } from "@mui/material";
 import HoverCard from "../components/HoverCard";
+import { useNavigate } from "react-router-dom";
 
 const Team = () => {
   const basePath = import.meta.env.BASE_URL;
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -36,7 +38,7 @@ const Team = () => {
       <Box display="flex" alignItems={"center"} justifyContent={"center"} sx={{paddingTop: "100px", paddingBottom: "100px"}}>
         <Box display="flex" alignItems={"center"} justifyContent={"space-between"} width={"70%"} >
           <Typography variant="h2"> <span style={{ fontWeight: "400", fontStyle: "italic" }}>Impressed</span> {<br/>} by our team? </Typography>
-          <Button variant="contained" sx={{ marginTop: "30px" }}>
+          <Button variant="contained" sx={{ marginTop: "30px" }}  onClick={() => {navigate("/booking1")}}>
                 Book your <span style={{ "marginLeft": 4, "marginRight": 4, fontWeight: 700, fontStyle: "italic" }}>free</span>consultation
           </Button>
         </Box>

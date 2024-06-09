@@ -137,10 +137,10 @@ const Home = () => {
                 Toronto
             </Typography>
             <Typography variant="body1" sx={{ fontSize: "1.2rem", textAlign: "center", marginBottom: "20px" }}>
-                1 Rideau St, Ottawa, ON K1N 8S7
+                290 Bremner Blvd, Toronto, ON M5V 3L9
                 </Typography>
                 <Typography variant="body1" sx={{ fontSize: "1.2rem", textAlign: "center", marginBottom: "20px" }}>
-                  <span style={{fontWeight: "600"}}>Phone:</span> (613) 123-4567 <br/>
+                  <span style={{fontWeight: "600"}}>Phone:</span> (416) 123-4567 <br/>
                   <span style={{fontWeight: "600"}}>Working Hours:</span> 7:30am-7:30pm
                 </Typography>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2692509270196!2d-79.38963172241282!3d43.642566171102736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sCN%20Tower!5e0!3m2!1sen!2sca!4v1717455537551!5m2!1sen!2sca" style={{ border: 0 }} width="500" height="400" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
